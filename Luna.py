@@ -1,24 +1,23 @@
-def respon_bot(pesan):
-    pesan = pesan.lower()
+def respon_bot(message):
+    message = message.lower()
     
-    if "halo" in pesan:
+    if "halo" in message:
         return "Halo juga! Ada yang bisa aku bantu?"
-    elif "nama kamu siapa" in pesan:
+    elif "nama kamu siapa" in message:
         return "Aku adalah AI sederhana buatanmu."
-    elif "cuaca" in pesan:
+    elif "cuaca" in message:
         return "Wah, aku kurang tahu cuaca hari ini. Coba lihat ke luar jendela ya!"
     else:
         return "Maaf, aku belum paham maksudmu. Bisa tanyakan dengan kata lain?"
 
-# Program utama
-print("Halo! Aku AI sederhana. Ketik 'keluar' untuk berhenti.")
+# Main
+print("Halo! Aku Luna. Ketik 'keluar' untuk berhenti.")
 
 while True:
-    pengguna = input("\nKamu: ")
-    
-    if pengguna.lower() == "keluar":
-        print("AI: Sampai jumpa lagi!")
+    User = input("\nKamu: ")
+    if User.lower() == "keluar":
+        print("Luna: Sampai jumpa lagi!")
         break
-        
-    jawaban = respon_bot(pengguna)
-    print(f"AI: {jawaban}")
+      
+    jawaban = respon_bot(User)
+    print(f"Luna: {jawaban}")
